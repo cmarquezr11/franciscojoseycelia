@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Francisco José & Celia | Nuestra boda</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400&display=swap');
+*{box-sizing:border-box}body{margin:0;background:#f8f5f0;color:#403a35;font-family:Montserrat,sans-serif;font-weight:300}
+.hero{min-height:100vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:#fff;background:linear-gradient(#0001,#0009),url('foto-francisco-jose-y-celia.jpg') center/cover no-repeat}
+.hero-content{width:min(850px,92%);padding:90px 20px 70px;text-shadow:0 2px 18px #0006}.small{font-size:13px;letter-spacing:5px;text-transform:uppercase}.names{font:500 clamp(56px,12vw,100px)/.9 'Cormorant Garamond',serif;margin:22px 0}.date{font:28px 'Cormorant Garamond',serif}.divider{width:65px;height:1px;background:#fff;margin:25px auto}.intro,.quote{font:italic 27px/1.4 'Cormorant Garamond',serif}
+section{max-width:900px;margin:auto;padding:80px 24px;text-align:center}h2{font:500 48px 'Cormorant Garamond',serif;margin:0 0 20px}.quote{max-width:650px;margin:auto}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}.count{background:#fff;border:1px solid #e7dfd5;padding:25px 10px}.count strong{display:block;font:500 44px 'Cormorant Garamond',serif}.count span{font-size:10px;letter-spacing:2px;text-transform:uppercase}.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:45px}.card{background:#fff;padding:38px 25px;border:1px solid #e7dfd5}.card h3{font:500 34px 'Cormorant Garamond',serif;margin:10px 0 15px}.time{letter-spacing:3px;font-size:12px;text-transform:uppercase}.card p{line-height:1.8;font-size:15px}footer{background:#e9e2d8;padding:55px 20px;text-align:center}.footer-name{font:500 44px 'Cormorant Garamond',serif}
+@media(max-width:650px){.hero{min-height:92vh}.countdown{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}section{padding:65px 20px}.intro{font-size:23px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero-content"><div class="small">Nos casamos</div><h1 class="names">Francisco José<br>&amp; Celia</h1><div class="divider"></div><div class="date">01 · 05 · 2027</div><p class="intro">“El mejor viaje es el que comienza juntos.”</p></div></header>
+<section><p class="quote">Hay momentos en la vida que merecen ser compartidos. Y este es, sin duda, uno de ellos.</p></section>
+<section><h2>Falta muy poco</h2><div class="countdown"><div class="count"><strong id="days">0</strong><span>Días</span></div><div class="count"><strong id="hours">0</strong><span>Horas</span></div><div class="count"><strong id="minutes">0</strong><span>Minutos</span></div><div class="count"><strong id="seconds">0</strong><span>Segundos</span></div></div></section>
+<section><h2>El gran día</h2><div class="cards"><div class="card"><div class="time">12:30 · Ceremonia</div><h3>Iglesia de San Bartolomé</h3><p>Comenzaremos aquí uno de los días más importantes de nuestra vida.</p></div><div class="card"><div class="time">Después de la ceremonia</div><h3>Finca Aguasanta</h3><p>Nos trasladaremos para celebrar, brindar, bailar y disfrutar juntos.</p></div></div></section>
+<section><p class="quote">“Y de repente sabes que es hora de empezar algo nuevo y confiar en la magia de los comienzos.”</p></section>
+<footer><div class="footer-name">Francisco José &amp; Celia</div><p>01 · 05 · 2027</p></footer>
+<script>
+const wedding=new Date('2027-05-01T12:30:00+02:00').getTime();
+function update(){let d=Math.max(0,wedding-Date.now());document.getElementById('days').textContent=Math.floor(d/86400000);document.getElementById('hours').textContent=Math.floor(d%86400000/3600000);document.getElementById('minutes').textContent=Math.floor(d%3600000/60000);document.getElementById('seconds').textContent=Math.floor(d%60000/1000)}update();setInterval(update,1000);
+</script>
+</body></html>
